@@ -12,6 +12,8 @@ const ERRORS_MESSAGES = {
   noResponse: 'NO RESPONSE',
   notFound404: '<h1>404 Not Found</h1>',
   noTitleFound: 'No title found',
+  errorFetchingTitles: 'Error fetching titles:',
+  serverError: '<h1>Internal Server Error</h1>',
 };
 
 const REGEX = {

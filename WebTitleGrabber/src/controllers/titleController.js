@@ -32,7 +32,7 @@ exports.getTitle = (req, res) => {
     },
     (err) => {
       if (err) {
-        console.error('Error processing addresses:', err);
+        console.error(ERRORS_MESSAGES.paringError, err);
       } else {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(`

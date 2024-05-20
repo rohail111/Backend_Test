@@ -36,8 +36,8 @@ exports.getTitle = (req, res) => {
       `);
     })
     .catch((error) => {
-      console.error('Error fetching titles:', error);
+      console.error(ERRORS_MESSAGES.errorFetchingTitles, error);
       res.writeHead(500, {'Content-Type': 'text/html'});
-      res.end('<h1>Internal Server Error</h1>');
+      res.end(ERRORS_MESSAGES.serverError);
     });
 };

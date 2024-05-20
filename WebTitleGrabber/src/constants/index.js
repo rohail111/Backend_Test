@@ -13,6 +13,7 @@ const ERRORS_MESSAGES = {
   notFound404: '<h1>404 Not Found</h1>',
   noTitleFound: 'No title found',
   parsedUrlUndefined: 'Parsed URL is undefined',
+  paringError: 'Error processing addresses:',
 };
 
 const REGEX = {

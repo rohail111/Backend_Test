@@ -17,7 +17,7 @@ exports.fetchTitle = (address, callback) => {
       },
       (parsedUrl, next) => {
         if (!parsedUrl) {
-          return next(new Error('Parsed URL is undefined'));
+          return next(new Error(ERRORS_MESSAGES.parsedUrlUndefined));
         }
         const protocol =
           parsedUrl.protocol === `${PROTOCOL.https}:` ? https : http;
@@ -27,9 +27,8 @@ exports.fetchTitle = (address, callback) => {
             response.statusCode < 400 &&
             response.headers.location
           ) {
-            // Redirect detected, construct the new URL and fetch title from it
             const redirectUrl = new URL(response.headers.location, parsedUrl);
-            exports.fetchTitle(redirectUrl.href, callback); // Recursive call to fetch the title from the redirected URL
+            exports.fetchTitle(redirectUrl.href, callback);
             return;
           }
 
@@ -50,7 +49,7 @@ exports.fetchTitle = (address, callback) => {
         request.on('error', (e) => {
           next(e);
         });
-        request.end(); // End the request
+        request.end();
       },
     ],
     (error, title) => {
