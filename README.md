@@ -20,11 +20,14 @@ Description: WebTitleFetcher implements web title retrieval using the RSVP libra
 
 Description: WebTitleGrabber utilizes the async library to fetch web page titles asynchronously. Async is a utility library that provides powerful asynchronous control flow primitives.
 
-## Usage
-
-Each project directory contains its own README.md file with detailed instructions on how to set up and run the project.
-
 ## Requirements
 
 - Node.js
 - npm
+
+#### Installation and Usage
+
+1. Navigate to the project directory
+
+- npm install
+- npm start (script is already set for start command)
